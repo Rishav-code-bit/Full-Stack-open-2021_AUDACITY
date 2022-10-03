@@ -139,14 +139,14 @@ const App = () => {
       <Notification message={message} />
       {user === null ? (
         <div>
-          <h2>Log in to application</h2>
+          <h5>Log on to my application</h5>
           {loginForm()}
         </div>
       ) : (
         <div>
           <h2>blogs</h2>
-          {userInfo()}
           {blogForm()}
+          {userInfo()}
           {blogs.sort((a, b) => (a.likes > b.likes ? -1 : 1)) &&
             blogs.map((blog) => (
               // eslint-disable-next-line react/jsx-key
